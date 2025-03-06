@@ -26,3 +26,6 @@ python test.py --input test_img_folder --output_dir heatmap_save_folder --model_
 ```bash
 python extract_centroid_from_heatmap.py --input_folder heatmaps_pred_path --output_folder centroid_saved_path --gt_folder [optional] /mmfs1/data/liupen/project/dataset/nuclei/wormID_data/centroids
 ```
+## Model Download
+Due to GitHub's file size limitations, please download the trained model from the following link:
+[Google Drive Link](https://drive.google.com/your_model_file)
