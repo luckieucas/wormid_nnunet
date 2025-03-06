@@ -1,0 +1,24 @@
+# Experiment configuration
+experiment:
+  name: "WormID_nnUNet"          # Name of the experiment
+  save_dir: "./experiments/heatmap"      # Base directory where experiment folders will be saved
+
+# Device configuration
+device: "cuda"                  # Use "cuda" for GPU or "cpu" for CPU
+
+# Data directories
+data:
+  train_image_dir: "/mmfs1/data/liupen/project/dataset/nuclei/wormID_data/training/train/images"       # Directory containing training images (3D tiff)
+  train_heatmap_dir: "/mmfs1/data/liupen/project/dataset/nuclei/wormID_data/training/train/heatmaps"     # Directory containing corresponding heatmaps (3D tiff)
+  test_image_dir: "/mmfs1/data/liupen/project/dataset/nuclei/wormID_data/training/test/images"           # Directory containing test images (3D tiff)
+  fold_data_dir: "/mmfs1/data/liupen/project/dataset/nuclei/wormID_data/cross_val"
+# Patch and sliding-window settings
+patch:
+  size: [32, 96, 64]           # Patch size in the order [D, H, W]
+  stride: [16, 48, 32]          # Stride for sliding-window inference (optional)
+
+# Training parameters
+batch_size: 2                # Batch size for training
+num_epochs: 1000               # Total number of training epochs
+learning_rate: 0.0001           # Learning rate for the optimizer
+input_channels: 3              # Number of input channels
